@@ -1,0 +1,25 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h1>Vazhipad Booking</h1>
+        <table border="3">
+            <tr>
+                <th>Vazhipad</th>
+            </tr>
+            {% for i in ok %}
+            <tr>
+                <td>{{ i.d.desc }}</td>
+{#            <td><a href="{% url 'remove' idd=i.booking_id %}">remove</a> </td>#}
+            </tr>
+            {% endfor %}
+        </table>
+</center>
+</body>
+</html>
+{% endblock %}

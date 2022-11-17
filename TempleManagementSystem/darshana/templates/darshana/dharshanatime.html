@@ -1,0 +1,72 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dharshana Details</title>
+</head>
+<body>
+	<center>
+		<h1>Dharshana Details</h1>
+		<form method="post">
+            {% csrf_token %}
+			<table border="3">
+				<td>Days</td>
+				<td colspan="2"><select name="day" id="shpfrom">
+					<option value="sun">Sunday</option>
+					<option value="mndy">Monday</option>
+					<option value="tue">Tuesday</option>
+					<option value="tue">Wednesday</option>
+					<option value="tue">Thursday</option>
+
+					<option value="tue">Friday</option>
+
+					<option value="tue">Saturday</option>
+                    <option value="days">All Days</option>
+
+
+				</select>
+                </td>
+				<tr>
+					<td>Date</td>
+					<td><input type="date" name="dt"></td>
+				</tr>
+				
+				<tr>
+					<td>Time</td>
+					<td><input type="time" name="tim"></td>
+				</tr>
+
+                <tr>
+					<td>Description</td>
+					<td><textarea name="desc" ></textarea> </td>
+				</tr>
+                <tr>
+					<td>price</td>
+                    <td><input type="text" name="pr" > </td>
+				</tr>
+                    <tr>
+					<td>Type</td>
+					<td><select name="spcl">
+                        <option value="pooja">pooja</option>
+                        <option value="vazhipade">vazhipade</option>
+                    </select> </td>
+				</tr>
+				
+				<tr >
+					<td></td>
+					<td ><input type="submit" style="text-align: center" name="Login"></td></tr>
+				
+
+
+			</table>
+			
+		</form>
+
+
+
+	</center>
+
+</body>
+</html>
+{% endblock %}

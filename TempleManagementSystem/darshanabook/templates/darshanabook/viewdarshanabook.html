@@ -1,0 +1,45 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view Dharshana</title>
+</head>
+<body>
+<center>
+	<h1> Booked devotees </h1>
+<table border="3">
+    <tr>
+		<td>Date</td>
+		<td>time</td>
+		<td>number of people</td>
+        <td>User Name</td>
+        <td>Address</td>
+        <td>id_proof</td>
+        <td>id_no</td>
+        <td>phone_no</td>
+        <td>date of birth</td>
+        <td>Gender</td>
+        <td>star</td>
+	</tr>
+        {% for i in w %}
+	<tr>
+		<td>{{ i.date }}</td>
+		<td>{{ i.time }}</td>
+		<td>{{ i.ppls }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.address }}</td>
+    <td><img src="/static/{{ i.id_proof }}" width="200" height="100"></td>
+    <td>{{ i.id_number }}</td>
+    <td>{{ i.phone_no }}</td>
+    <td>{{ i.date_of_birth }}</td>
+    <td>{{ i.gender }}</td>
+    <td>{{ i.star }}</td>
+	</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends 'temp/devoteeindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dharshana booking</title>
+</head>
+<body>
+	<center>
+		<h1>Vazhipad Booking</h1>
+        <table border="3">
+            <tr>
+                <th>Vazhipad</th>
+            </tr>
+            {% for i in a %}
+            <tr>
+                <td>{{ i.d.desc }}</td>
+            <td><a href="{% url 'remove' idd=i.booking_id %}">remove</a> </td>
+            </tr>
+            {% endfor %}
+        </table>
+		<form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+			<table border="3">
+                <tr>
+                    <td>username</td>
+
+                        <td><input type="text" name="n1">
+
+
+				<tr>
+					<td>Date</td>
+					<td><input type="date" name="dt" ></td>
+				</tr>
+				<tr>
+					<td>Time</td>
+					<td><input type="time" name="tim"></td>
+				</tr>
+
+{#                <tr>#}
+{#					<td>No.of people</td>#}
+{#					<td><input type="text" name="ppl"></td>#}
+{#				</tr>#}
+
+{#            <tr>#}
+{#					<td>address</td>#}
+{#					<td><input type="text" name="ad1"></td>#}
+{#				</tr>#}
+{#                <tr>#}
+{#					<td>id proof</td>#}
+{#					<td><input type="file" name="prv"></td>#}
+{#				</tr>#}
+{#                <tr>#}
+{#					<td>id no</td>#}
+{#					<td><input type="text" name="prv_no"></td>#}
+{#				</tr>#}
+{#                <tr>#}
+{#					<td>phone no</td>#}
+{#					<td><input type="text" name="phn"></td>#}
+{#				</tr>#}
+{#                <tr>#}
+{#					<td>date of birth</td>#}
+{#					<td><input type="date" name="dob"></td>#}
+{#				</tr>#}
+                <tr>
+					<td>star</td>
+					<td><select name="str">
+                        <option value="Aswathi">Aswathi</option>
+                        <option value="Bharani">Bharani</option>
+                        <option value="Kaarthika">Kaarthika</option>
+                        <option value="Rohini">Rohini</option>
+                        <option value="Makeeram">Makeeram</option>
+                        <option value="Thiruvathira">Thiruvathira</option>
+                        <option value="Punartham">Punartham</option>
+                        <option value="Pooyam">Pooyam</option>
+                        <option value="Aayilyam">Ayilyam</option>
+                        <option value="Makam">Makam</option>
+                        <option value="Pooram">Pooram</option>
+                        <option value="Uthram">Uthram</option>
+                        <option value="Atham">Atham</option>
+                        <option value="Chithira">Chithira</option>
+                        <option value="Chothi">Chothi</option>
+                        <option value="Visaakham">Visaakham</option>
+                        <option value="Anizham">Anizham</option>
+                        <option value="Thrikketta">Thrikketta</option>
+                        <option value="Moolam">Moolam</option>
+                        <option value="Pooraatam">Pooraatam</option>
+                        <option value="Uthraatam">Uthraatam</option>
+                        <option value="Thiruvonam">Thiruvonam</option>
+                        <option value="Avittam">Avittam</option>
+                        <option value="Chathayam">Chathayam</option>
+                        <option value="Pooratathi">Pooratathi</option>
+                        <option value="Uthrattaathi">Uthrattathi</option>
+                        <option value="Revathi">Revathi</option>
+
+
+
+                    </select></td>
+				</tr>
+                <tr>
+					<td>gender</td>
+					<td><input type="radio" name="gender" value="male">male
+                    <input type="radio" name="gender" value="female">female</td>
+				</tr>
+
+				<tr >
+					<td></td>
+					<td ><input type="submit" style="text-align: center" name="Login"></td></tr>
+				
+
+
+			</table>
+			
+		</form>
+
+
+
+	</center>
+
+</body>
+</html>
+{% endblock %}

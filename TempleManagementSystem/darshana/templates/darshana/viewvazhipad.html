@@ -1,0 +1,32 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Star</th>
+        <th>Gender</th>
+    </tr>
+    {% for i in ok %}
+    <tr>
+       <td>{{ i.name }}</td>
+        <td>{{ i.date }}</td>
+        <td>{{ i.time }}</td>
+        <td>{{ i.star }}</td>
+        <td>{{ i.gender }}</td>
+        <td><a href="{% url 'details' idd=i.vb_id %}">details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>
+{% endblock %}

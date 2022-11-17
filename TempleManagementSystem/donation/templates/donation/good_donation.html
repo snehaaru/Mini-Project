@@ -1,0 +1,39 @@
+{% extends 'temp/publicindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donation Details</title>
+</head>
+<body>
+	<center>
+		<h1>View Donation</h1>">
+    <table border="3">
+		<tr>
+		<td>Member Name</td>
+		<td>Donation Amount</td>
+		<td>Date</td>
+		<td>time</td>
+            <td>status</td>
+            <td>Type</td>
+
+
+	</tr>
+        {% for i in k %}
+	<tr>
+		<td>{{ i.u.uname }}</td>
+		<td>{{ i.amount }}</td>
+		<td>{{ i.date}}</td>
+        <td>{{ i.time}}</td>
+        <td>{{ i.status }}</td>
+        <td>{{ i.do_type }}</td>
+	</tr>
+        {% endfor %}
+	</table>
+    </center>
+
+</body>
+
+</html>
+{% endblock %}

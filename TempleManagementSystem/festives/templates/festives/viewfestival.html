@@ -1,0 +1,39 @@
+{% extends 'temp/publicindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Festives</title>
+</head>
+<body>
+	<center>
+	<h1>Festivals</h1>
+	<table border="3" width="70%">
+		<tr class="btn-primary" height="50px">
+		<td>Festive name</td>
+		<td>Start date</td>
+		<td>End date</td>
+		<td>About</td>
+		<td>Special time</td>
+		<td>Pooja time</td>
+            <td>Image</td>
+
+
+		
+	</tr>
+        {% for i in d %}
+	<tr>
+		<td>{{ i.fname }}</td>
+		<td>{{ i.startsdate }}</td>
+		<td>{{ i.enddate }}</td>
+		<td>{{ i.about }}</td>
+		<td>{{ i.spclpooja }}</td>
+		<td>{{ i.opentime }}</td>
+    <td><img src="/static/{{ i.image }}" width="200" height="100"></td>
+	</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

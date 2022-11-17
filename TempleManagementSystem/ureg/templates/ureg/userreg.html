@@ -1,0 +1,110 @@
+{% extends 'temp/publicindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+<center>
+	<h1>REGISTRATION</h1>
+	<form method="post">
+        {% csrf_token %}
+		<p>You can register here</p>
+		<table border="3" >
+			<tr>
+				<td>Full Name</td>
+				<td><input type="text" name="name"></td>
+
+			</tr>
+
+				<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gen" value="male"> Male
+					<input type="radio" name="gen" value="female"> Female</td>
+
+			</tr>
+			<tr>
+				<td>Address</td>
+				<td><textarea name="address"></textarea></td>
+
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="pwd"></td>
+
+			</tr>
+			<tr>
+				<td>Confirm Passwoprd</td>
+				<td><input type="password" name="pwd1"></td>
+
+			</tr>
+			<tr>
+				<td>Date of Birth</td>
+				<td><input type="Date" name="dob"></td>
+
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><input type="email" name="email"></td>
+
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input type="text" name="Phone" size="10"></td>
+
+			</tr>
+			<tr>
+				<td>Star</td>
+				<td><select name="str">
+                        <option value="Aswathi">Aswathi</option>
+                        <option value="Bharani">Bharani</option>
+                        <option value="Kaarthika">Kaarthika</option>
+                        <option value="Rohini">Rohini</option>
+                        <option value="Makeeram">Makeeram</option>
+                        <option value="Thiruvathira">Thiruvathira</option>
+                        <option value="Punartham">Punartham</option>
+                        <option value="Pooyam">Pooyam</option>
+                        <option value="Aayilyam">Ayilyam</option>
+                        <option value="Makam">Makam</option>
+                        <option value="Pooram">Pooram</option>
+                        <option value="Uthram">Uthram</option>
+                        <option value="Atham">Atham</option>
+                        <option value="Chithira">Chithira</option>
+                        <option value="Chothi">Chothi</option>
+                        <option value="Visaakham">Visaakham</option>
+                        <option value="Anizham">Anizham</option>
+                        <option value="Thrikketta">Thrikketta</option>
+                        <option value="Moolam">Moolam</option>
+                        <option value="Pooraatam">Pooraatam</option>
+                        <option value="Uthraatam">Uthraatam</option>
+                        <option value="Thiruvonam">Thiruvonam</option>
+                        <option value="Avittam">Avittam</option>
+                        <option value="Chathayam">Chathayam</option>
+                        <option value="Pooratathi">Pooratathi</option>
+                        <option value="Uthrattaathi">Uthrattathi</option>
+                        <option value="Revathi">Revathi</option>
+
+
+
+                    </select></td>
+
+			</tr>
+			<tr>
+				<td>&#160</td>
+				<td><input type="submit" ></td>
+
+			</tr>
+
+
+
+		</table>
+	</form>
+</div>
+</center>
+
+</body>
+</html>
+{% endblock %}

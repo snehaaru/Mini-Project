@@ -1,0 +1,41 @@
+{% extends 'temp/devoteeindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manageship</title>
+</head>
+<body>
+<center>
+    <table border="2">
+        <tr>
+            <td> Name</td>
+            <td>Address</td>
+            <td>Date of birth</td>
+            <td>E-mail</td>
+            <td>Phone</td>
+            <td>Nakshathra</td>
+        </tr>
+        {% for i in u %}
+        <tr>
+            <td>{{ i.uname }}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.email}}</td>
+            <td>{{ i.phone}}</td>
+            <td>{{i.nakshathra}}</td>
+            <td><a href="{% url 'up' idd=i.u_id %}">Update</a> </td>
+        </tr>
+        {% endfor %}
+
+
+
+{#        <td><a href={% url 'd' idd=i.u_id %}>Delete</a> </td>#}
+
+    </table>
+</center>
+
+</body>
+</html>
+{% endblock %}

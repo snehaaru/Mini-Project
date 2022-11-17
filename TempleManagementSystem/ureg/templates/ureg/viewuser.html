@@ -1,0 +1,38 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+	<center>
+	<h1>Devotees List</h1>
+	<table border="3">
+		<tr>
+		<td>Name</td>
+            <td>Address</td>
+		<td>Gender</td>
+		<td>Email</td>
+		<td>Contact</td>
+		<td>DOB</td>
+            <td>nakshathra</td>
+
+	</tr>
+        {% for i in g %}
+	<tr>
+		<td>{{ i.uname }}</td>
+        <td>{{ i.address }}</td>
+		<td>{{ i.gender }}</td>
+		<td>{{ i.email }}</td>
+		<td>{{ i.phone }}</td>
+		<td>{{ i.dob }}</td>
+        <td>{{ i.nakshathra }}</td>
+	</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

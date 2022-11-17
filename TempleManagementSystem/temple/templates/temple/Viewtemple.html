@@ -1,0 +1,50 @@
+{% extends 'temp/publicindex.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temple</title>
+</head>
+<body>
+
+	
+	<table border="2" align="center"><center>
+        {% for i in f %}
+		<tr>
+            <th>NAME</th>
+            <td>{{ i.name }}</td>
+        </tr>
+    <tr>
+            <th>PLACE</th>
+        <td>{{ i.place }}</td>
+    </tr>
+    <tr>
+            <th>ADDRESS</th>
+        <td>{{ i.address }}</td>
+    </tr>
+    <tr>
+            <th>LORD</th>
+        <td>{{ i.prathishta }}</td>
+    </tr>
+    <tr>
+            <th>HISTORY</th>
+        <td>{{ i.history }}</td>
+    </tr>
+    <tr>
+            <th>ESTABLISHED</th>
+        <td>{{ i.estd }}</td>
+    </tr>
+    <tr>
+            <th>IMAGE</th>
+        <td><img src="/static/{{ i.image}}" width="200" height="100"></td>
+        </tr>
+
+        {% endfor%}
+    </center>
+	</table>
+
+
+</body>
+</html>
+{% endblock %}

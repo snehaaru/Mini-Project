@@ -1,0 +1,34 @@
+{% extends 'temp/adminindex.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report</title>
+</head>
+<body>
+	<center>
+	
+	<table border="3">
+		<tr>
+		<td>Caption</td>
+            <td>About</td>
+		<td>Report</td>
+            <td>date</td>
+		<td>Time</td>
+	
+	</tr>
+        {% for i in e %}
+	<tr>
+		<td>{{ i.caption }}</td>
+		<td>{{ i.about }}</td>
+		<td>{{ i.report }}</td>
+		<td>{{ i.date }}</td>
+        <td>{{ i.time }}</td>
+		
+	</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}
